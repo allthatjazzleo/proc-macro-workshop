@@ -1,0 +1,8 @@
+[package]
+name = "builder-for-expand"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+derive_builder = { path = "../.." }
+# TODO

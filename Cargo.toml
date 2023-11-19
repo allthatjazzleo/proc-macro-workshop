@@ -5,6 +5,16 @@ edition = "2021"
 publish = false
 
 [workspace]
+members = [
+    # "bitfield",
+    "builder",
+    "builder/examples/builder-for-expand",
+    "debug",
+    "debug/examples/debug-for-expand",
+    # "seq",
+    # "sorted",
+]
+
 
 [[bin]]
 name = "workshop"

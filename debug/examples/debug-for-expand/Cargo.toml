@@ -1,0 +1,8 @@
+[package]
+name = "debug-for-expand"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+derive_debug = { path = "../.." }
+# TODO

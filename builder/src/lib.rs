@@ -32,7 +32,7 @@ fn expand(input: DeriveInput) -> Result<TokenStream> {
     let instance_fields = instance_fields(&input.data);
 
     let expanded = quote! {
-        struct #builder_name {
+        pub struct #builder_name {
             #builder_fields
         }
 
@@ -86,7 +86,7 @@ fn builder_methods(data: &Data) -> TokenStream {
     match *data {
         Data::Struct(ref data) => match data.fields {
             Fields::Named(ref fields) => {
-                let recurse = fields.named.iter().map(|f| {
+                let recurse = fields.named.iter().map(|f | {
                     let mut builder_each = None;
                     for attr in &f.attrs {
                         if attr.path().is_ident("builder") {
